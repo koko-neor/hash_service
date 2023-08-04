@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Если файл или директория существует, то не применять перенаправление
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /web/index.php
